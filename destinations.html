@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Street2Feast · Destinations</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body data-page="destinations">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Street2Feast home">Street2Feast</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">☰</button>
+      <ul id="nav-menu">
+        <li><a data-nav="index" href="index.html">Home</a></li>
+        <li><a data-nav="destinations" href="destinations.html">Destinations</a></li>
+        <li><a data-nav="cuisine-guide" href="cuisine-guide.html">Cuisine Guide</a></li>
+        <li><a data-nav="new-openings" href="new-openings.html">New Openings</a></li>
+        <li><a data-nav="about" href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" class="content narrow">
+      <style>
+        /* Grid wrapper for destination cards */
+        .dest-grid {
+          display: grid;
+          gap: 16px;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        /* Card base */
+        .card {
+          position: relative;
+          display: block;
+          background: #f8f6e3;
+          border: 2px solid transparent;
+          border-radius: 12px;
+          overflow: hidden;
+          color: #111;
+          text-decoration: none;
+          transition: .25s;
+        }
+
+        /* Card hover effects */
+        .card:hover {
+          transform: translateY(-4px);
+          border-color: #f2b705;
+          box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
+        }
+
+        /* Card image */
+        .card img {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+          transition: transform .25s;
+        }
+
+        /* Slight zoom on hover */
+        .card:hover img {
+          transform: scale(1.05);
+        }
+
+        /* Card title */
+        .card h3 {
+          margin: 12px;
+          font-weight: 700;
+          font-size: 1.1rem;
+          line-height: 1.2;
+          transition: color .25s;
+        }
+
+        /* Title color on hover */
+        .card:hover h3 {
+          color: #f2b705;
+        }
+
+        /* “Explore →” text */
+        .card .cta {
+          margin: 0 12px 12px;
+          color: #f2b705;
+          opacity: 0;
+          transition: .25s;
+          display: inline-block;
+        }
+
+        /* Reveal CTA on hover */
+        .card:hover .cta {
+          opacity: 1;
+        }
+
+        /* Make the whole card clickable while preserving semantics */
+        .card .stretched-link {
+          position: absolute;
+          inset: 0;
+          text-indent: -9999px;
+          overflow: hidden;
+        }
+      </style>
+
+      <div class="dest-grid">
+        <a class="card" href="beijing.html">
+          <img src="https://images.unsplash.com/photo-1555085634-3444448f450c?w=1200&amp;q=80" alt="Beijing">
+          <h3>Beijing</h3>
+          <span class="cta">Explore →</span>
+          <span class="stretched-link">Beijing</span>
+        </a>
+
+        <a class="card" href="shanghai.html">
+          <img src="https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1200&amp;q=80" alt="Shanghai">
+          <h3>Shanghai</h3>
+          <span class="cta">Explore →</span>
+          <span class="stretched-link">Shanghai</span>
+        </a>
+
+        <a class="card" href="chengdu.html">
+          <img src="https://images.unsplash.com/photo-1711739833251-4902d46e3db0?w=1200&amp;q=80" alt="Chengdu">
+          <h3>Chengdu</h3>
+          <span class="cta">Explore →</span>
+          <span class="stretched-link">Chengdu</span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Street2Feast · A guide to China’s local flavors.</p>
+    </footer>
+
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>

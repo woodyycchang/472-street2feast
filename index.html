@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Street2Feast · Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body data-page="index" class="bg-background text-foreground">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Street2Feast home">Street2Feast</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">☰</button>
+      <ul id="nav-menu">
+        <li><a data-nav="index" href="index.html">Home</a></li>
+        <li><a data-nav="destinations" href="destinations.html">Destinations</a></li>
+        <li><a data-nav="cuisine-guide" href="cuisine-guide.html">Cuisine Guide</a></li>
+        <li><a data-nav="new-openings" href="new-openings.html">New Openings</a></li>
+        <li><a data-nav="about" href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" class="content narrow">
+      <section class="hero" aria-label="Hero">
+        <img src="https://cs272-wordpress.cs.wisc.edu/f25/p10-site/wp-content/uploads/2025/10/street2feast_hero_1280x720-1024x576.webp" alt="" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <h1>Street2Feast</h1>
+          <p>Discover delicious, trustworthy, and affordable street food across China’s cities.</p>
+        </div>
+      </section>
+
+      <section class="section-highlight split" aria-labelledby="food-travel-title">
+
+        <div class="split-body">
+          <h2 id="food-travel-title"><strong>Food and Travel</strong>！</h2>
+          <p><strong>Travel &amp; Eat Your Way Across China</strong></p>
+          <div class="cta-row" role="group" aria-label="Explore sections">
+            <a class="btn" href="destinations.html">Explore Destinations</a>
+            <a class="btn outline" href="cuisine-guide.html">Cuisine Guide</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="content-body">
+        <section class="narrow">
+          <h2>Our Mission</h2>
+          <p>We help travelers find delicious, trustworthy, and affordable street food across China. Every recommendation includes the Chinese/English name, flavor description, and corresponding cities.</p>
+        </section>
+
+        <section class="narrow">
+          <h2>How to Use This Site</h2>
+          <ul>
+            <li>Browse “Destinations” to see what to eat in each city</li>
+            <li>Use the “Cuisine Guide” to learn dish names and ordering terms</li>
+            <li>Watch “New Openings” for the latest spots</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Street2Feast · A guide to China’s local flavors.</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>

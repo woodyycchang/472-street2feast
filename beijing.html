@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Street2Feast · Beijing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body data-page="beijing">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Street2Feast home">Street2Feast</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">☰</button>
+      <ul id="nav-menu">
+        <li><a data-nav="index" href="index.html">Home</a></li>
+        <li><a data-nav="destinations" href="destinations.html">Destinations</a></li>
+        <li><a data-nav="cuisine-guide" href="cuisine-guide.html">Cuisine Guide</a></li>
+        <li><a data-nav="new-openings" href="new-openings.html">New Openings</a></li>
+        <li><a data-nav="about" href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" class="content narrow">
+      <div class="content-body">
+        <style>
+          .city-page{--wrap-max:1100px;--gutter:12px;--radius-lg:14px;--radius-md:12px;--card-bg:#fff;--card-border:#eee;--shadow-sm:0 2px 10px rgba(0,0,0,.04)}
+          .city-page *,.city-page *::before,.city-page *::after{box-sizing:border-box}
+          .city-page img{display:block;max-width:100%;height:auto}
+          .city-page h1,.city-page h2,.city-page p,.city-page figure{margin:0}
+          .city-page section{display:block}
+
+          /* hero */
+          .city-page .hero-wrap{max-width:var(--wrap-max);margin:0 auto;padding:0 var(--gutter)}
+          .city-page .hero-img,.city-page .hero-img img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius-lg)}
+
+          /* intro */
+          .city-page .intro{max-width:900px;margin:14px auto 0;padding:0 var(--gutter);line-height:1.7}
+
+          /* items */
+          .city-page .section-list{display:grid;gap:22px;margin:28px auto;max-width:var(--wrap-max);padding:0 var(--gutter)}
+          .city-page .item{display:grid;grid-template-columns:1.15fr 1.25fr;gap:20px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow-sm)}
+          .city-page .figure img{border-radius:var(--radius-md)}
+          .city-page .item h2{margin:.25rem 0}
+          .city-page .one-liner{margin:.25rem 0 .5rem}
+          .city-page .bg{margin:0;color:#333}
+
+          /* review header row (same 2:1 layout, no nested wrappers needed) */
+          .city-page .rv-inline{max-width:var(--wrap-max);margin:24px auto 0;padding:0 var(--gutter);display:grid;grid-template-columns:2fr 1fr;gap:16px;align-items:end}
+
+          @media (max-width:900px){
+            .city-page .item{grid-template-columns:1fr}
+            .city-page .rv-inline{grid-template-columns:1fr}
+          }
+        </style>
+
+        <div class="city-page">
+          <div class="hero-wrap">
+            <figure class="hero-img">
+              <img src="https://images.unsplash.com/photo-1555085634-3444448f450c?w=1200&amp;q=80" alt="Beijing">
+            </figure>
+          </div>
+
+          <div class="intro">
+            <p>Beijing, the capital of the People's Republic of China, is a city where ancient history and modern development meet. It is home to some of the country's most famous landmarks, including the Forbidden City, the Temple of Heaven, and a section of the Great Wall. Beijing's culinary scene is equally impressive, with Peking Duck being its most renowned dish.</p>
+          </div>
+
+          <div class="section-list">
+            <div class="item">
+              <figure class="figure">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/BeijingFood.jpg/640px-BeijingFood.jpg" alt="Peking Duck">
+              </figure>
+              <section class="copy">
+                <h2>Peking Duck</h2>
+                <p class="one-liner"><em>Beijing’s most famous dish—roasted duck with super-crispy skin and soft pancakes.</em></p>
+                <p class="bg">Chefs in Beijing built this dish over many generations. It started in royal kitchens and later spread to the city’s restaurants. The key is the shiny, crisp skin, sliced thin, then wrapped with scallion and sweet bean sauce. It became a “must-eat” for visitors and a proud symbol of the capital.</p>
+              </section>
+            </div>
+
+            <div class="item">
+              <figure class="figure">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Jajangmyeon_by_KFoodaddict.jpg/640px-Jajangmyeon_by_KFoodaddict.jpg" alt="Fried Sauce Noodles">
+              </figure>
+              <section class="copy">
+                <h2>Fried Sauce Noodles</h2>
+                <p class="one-liner"><em>Thick wheat noodles topped with rich soybean-paste sauce and diced pork.</em></p>
+                <p class="bg">Locals call it <em>zhajiangmian</em>. The dish grew out of North China and Shandong cooking, then became a Beijing favorite. In the capital, cooks fry yellow soybean paste with a little sweet wheat paste, add lots of scallion and diced pork, and serve it over thick handmade noodles with crunchy vegetables. Beijing’s version ended up the best-known style across China.</p>
+              </section>
+            </div>
+
+            <div class="item">
+              <figure class="figure">
+                <img src="https://kabu-go.com.hk/wp-content/uploads/2025/04/instant-boiled-mutton-hot-pot-recipe-shuan-yang-rou-1745482727.jpg" alt="Instant-boiled Mutton hotpot">
+              </figure>
+              <section class="copy">
+                <h2>Instant-boiled Mutton</h2>
+                <p class="one-liner"><em>Paper-thin lamb swished in hot broth, then dipped in sesame sauce.</em></p>
+                <p class="bg">People often link this hotpot to the Mongol era, but records show the quick-slice, quick-boil method existed even earlier. In the Qing dynasty it became a popular Beijing dish. The tall copper chimney pot and sesame dipping sauce are now classic signs of a Beijing hotpot house.</p>
+              </section>
+            </div>
+          </div>
+
+          <div class="rv-inline" aria-label="Reviews intro">
+            <h2>Foodie Reviews</h2>
+            <h3>Share Your Experience</h3>
+          </div>
+        </div>
+      </div>
+
+      <section class="narrow">
+        <h2>Foodie Reviews</h2>
+        <div id="reviews" class="reviews" aria-live="polite"></div>
+        <form class="review-form" data-storage="reviews_beijing">
+          <label for="review-text">Share your experience</label>
+          <textarea id="review-text" required placeholder="What did you try?"></textarea>
+          <button class="btn" type="submit">Submit</button>
+          <small class="muted">Reviews are saved in your browser (localStorage).</small>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Street2Feast · A guide to China’s local flavors.</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/nav.js"></script>
+    <script src="js/city.js"></script>
+  </body>
+</html>
