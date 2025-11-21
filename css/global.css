@@ -24,37 +24,6 @@
   --foreground: 0 0% 98%;
 }
 
-/* --- Nav contrast fix --- */
-.site-nav {
-  background-color: #fffbea;           /* light cream bar */
-}
-
-.site-nav .brand {
-  color: #1a1308;
-}
-
-.site-nav #nav-menu a {
-  color: #1a1308;                      /* dark text for all links */
-  font-weight: 600;
-  opacity: 0.85;
-  text-decoration: none;
-}
-
-.site-nav #nav-menu a:hover,
-.site-nav #nav-menu a:focus-visible {
-  opacity: 1;
-}
-
-/* active page pill (nav.js adds .is-active to current link) */
-.site-nav #nav-menu a.is-active {
-  background-color: #f2b705;
-  color: #000;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  opacity: 1;
-}
-
-
 * { box-sizing: border-box; }
 
 html,
