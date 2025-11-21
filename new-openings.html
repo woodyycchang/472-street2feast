@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Street2Feast · New Openings</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body data-page="new-openings">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Street2Feast home">Street2Feast</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">☰</button>
+      <ul id="nav-menu">
+        <li><a data-nav="index" href="index.html">Home</a></li>
+        <li><a data-nav="destinations" href="destinations.html">Destinations</a></li>
+        <li><a data-nav="cuisine-guide" href="cuisine-guide.html">Cuisine Guide</a></li>
+        <li><a data-nav="new-openings" href="new-openings.html">New Openings</a></li>
+        <li><a data-nav="about" href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" class="content narrow"></main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Street2Feast · A guide to China’s local flavors.</p>
+    </footer>
+
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>
