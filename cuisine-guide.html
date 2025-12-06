@@ -7,6 +7,7 @@
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="css/global.css">
   </head>
+
   <body data-page="cuisine-guide">
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -27,7 +28,24 @@
         <p>Discover the Great Cuisines of China — each region has a unique history, flavor profile, and iconic dishes.</p>
         <p><strong>Click each card to explore cities.</strong></p>
 
-        <section class="grid three">
+        <!-- Add a search bar, the magnifying glass icon(unicode emoji), and a submit button -->
+        <form id="searchForm" class="search-bar" role="search">
+          <label class="visually-hidden" for="searchInput">Search dishes or cities</label>
+          <div class="search-bar-inner">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search dishes or cities..."
+              aria-label="Search dishes or cities"
+            >
+            <button type="submit">Search</button>
+          </div>
+        </form>
+
+
+        <!-- id dishGrid is used for java script to show/hide cards -->
+        <section id="dishGrid" class="grid three">
           <a class="card" href="beijing.html">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/BeijingFood.jpg/640px-BeijingFood.jpg" alt="Peking Duck">
             <h3>Peking Duck (Beijing)</h3>
@@ -90,5 +108,6 @@
     </footer>
 
     <script src="js/nav.js"></script>
+    <script src="js/search.js"></script> <!-- Add search functionality -->
   </body>
 </html>

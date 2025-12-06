@@ -102,7 +102,7 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #eee;
   box-shadow: 0 1px 0 #eee;
-  background: #fff;
+  background: #140526;
 }
 
 .site-nav ul {
@@ -299,4 +299,77 @@ card,
 .hero-figure img,
 .city-hero img {
   border-bottom: 1px solid #eee;
+}
+
+/* for hidden text (search dishes or cities) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Search bar layout */
+.search-bar {
+  margin: 1.5rem 0 2rem;
+}
+
+/* entire white area */
+.search-bar-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 0.4rem 0.4rem 0.4rem 0.9rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+              0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Icon */
+.search-icon {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+
+/* Input */
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #222;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.5rem;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #999;
+}
+
+.search-bar input[type="text"]:focus {
+  outline: none;
+}
+
+/* Button on the right */
+.search-bar button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 1.25rem;
+  margin-left: 0.5rem;
+  background: #c8872f;          /* match your nav gold */
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-bar button:hover,
+.search-bar button:focus {
+  background: #e29a35;
 }
