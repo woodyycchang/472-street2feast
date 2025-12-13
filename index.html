@@ -7,6 +7,7 @@
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="css/global.css">
   </head>
+
   <body data-page="index" class="bg-background text-foreground">
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -22,6 +23,8 @@
     </nav>
 
     <main id="main" class="content narrow">
+
+      <!-- Hero Section -->
       <section class="hero" aria-label="Hero">
         <img src="assets/images/street2feast_hero_1280x720-1024x576.webp" alt="" class="hero-img">
         <div class="hero-overlay"></div>
@@ -31,8 +34,8 @@
         </div>
       </section>
 
+      <!-- Highlight Section -->
       <section class="section-highlight split" aria-labelledby="food-travel-title">
-
         <div class="split-body">
           <h2 id="food-travel-title"><strong>Food and Travel</strong>！</h2>
           <p><strong>Travel &amp; Eat Your Way Across China</strong></p>
@@ -44,11 +47,17 @@
       </section>
 
       <div class="content-body">
+
+        <!-- Mission -->
         <section class="narrow">
           <h2>Our Mission</h2>
-          <p>We help travelers find delicious, trustworthy, and affordable street food across China. Every recommendation includes the Chinese/English name, flavor description, and corresponding cities.</p>
+          <p>
+            We help travelers find delicious, trustworthy, and affordable street food across China. 
+            Every recommendation includes the Chinese/English name, flavor description, and corresponding cities.
+          </p>
         </section>
 
+        <!-- How to Use -->
         <section class="narrow">
           <h2>How to Use This Site</h2>
           <ul>
@@ -56,6 +65,13 @@
             <li>Use the “Cuisine Guide” to learn dish names and ordering terms</li>
           </ul>
         </section>
+
+        <!-- ⭐ NEW: Dynamic Featured Foods Section -->
+        <section class="narrow" id="home-features">
+          <h2>Featured Street Foods</h2>
+          <div id="features-container" class="features-grid"></div>
+        </section>
+
       </div>
     </main>
 
@@ -64,8 +80,34 @@
     </footer>
 
     <script>
+      // Footer Year
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
+    <!-- ⭐ NEW: Load home-features.json and create cards -->
+    <script>
+      fetch("assets/images/home-features.json")
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById("features-container");
+
+          data.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "feature-card";
+
+            card.innerHTML = `
+              <img src="assets/images/${item.file}" alt="${item.title}">
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+            `;
+
+            container.appendChild(card);
+          });
+        })
+        .catch(err => console.error("Error loading features:", err));
+    </script>
+
     <script src="js/nav.js"></script>
   </body>
 </html>
+

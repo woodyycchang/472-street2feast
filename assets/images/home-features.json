@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Chengdu Hotpot",
+    "city": "Chengdu",
+    "description": "A bold and spicy must-try experience featuring Sichuan peppercorns.",
+    "file": "assets/images/chengdu-hotpot.png"
+  },
+  {
+    "title": "Shanghai Xiaolongbao",
+    "city": "Shanghai",
+    "description": "Delicate soup dumplings known for thin skin and rich broth.",
+    "file": "assets/images/shanghai-xiaolongbao.jpg"
+  },
+  {
+    "title": "Scallion Pancake",
+    "city": "Shanghai",
+    "description": "Crispy, flaky, and aromatic — a popular street food favorite.",
+    "file": "assets/images/scallion-pancake.avif"
+  },
+  {
+    "title": "Beijing Zhajiangmian",
+    "city": "Beijing",
+    "description": "A classic noodle dish topped with savory fried bean paste.",
+    "file": "assets/images/beijing-zhajiangmian.jpeg"
+  }
+]
