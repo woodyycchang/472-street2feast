@@ -66,7 +66,7 @@
           </ul>
         </section>
 
-        <!-- ⭐ NEW: Dynamic Featured Foods Section -->
+        <!-- ⭐ Featured Foods Section -->
         <section class="narrow" id="home-features">
           <h2>Featured Street Foods</h2>
           <div id="features-container" class="features-grid"></div>
@@ -84,7 +84,7 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 
-    <!-- ⭐ NEW: Load home-features.json and create cards -->
+    <!-- ⭐ Load home-features.json and create cards -->
     <script>
       fetch("assets/images/home-features.json")
         .then(res => res.json())
@@ -96,7 +96,7 @@
             card.className = "feature-card";
 
             card.innerHTML = `
-              <img src="assets/images/${item.file}" alt="${item.title}">
+              <img src="${item.image}" alt="${item.title}">
               <h3>${item.title}</h3>
               <p>${item.description}</p>
             `;
