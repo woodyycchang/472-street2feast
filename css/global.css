@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
-/* Theme variables */
+/* Theme variables (kept for other styling use) */
 :root { 
   --muted: #666; 
   --brand: #f2b705;
@@ -9,21 +9,6 @@
   --background: 45 60% 88%; 
   --sidebar-background: 0 0% 98%; 
   --foreground: 0 0% 12%; 
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 20 14.3% 4.1%;
-    --sidebar-background: 240 5.9% 10%;
-    --foreground: 0 0% 98%;
-  }
-}
-
-/* Optional dark-mode class hook */
-.dark {
-  --background: 20 14.3% 4.1%;
-  --sidebar-background: 240 5.9% 10%;
-  --foreground: 0 0% 98%;
 }
 
 /* Global resets */
@@ -50,13 +35,15 @@ a {
   text-decoration: none; 
 }
 
-/* Utility color classes */
-.bg-background { 
-  background-color: hsl(var(--background)); 
+/* ============================================
+   Utility color classes (FORCE LIGHT THEME)
+   ============================================ */
+.bg-background {
+  background-color: #FFF9D6; /* beige */
 }
 
-.text-foreground { 
-  color: hsl(var(--foreground)); 
+.text-foreground {
+  color: #111111; /* black text */
 }
 
 /* Main page background + default text color */
@@ -146,7 +133,9 @@ figcaption {
   margin-top: 0.25rem; 
 }
 
-/* Top navigation bar */
+/* ============================================
+   Top navigation bar (LIGHT)
+   ============================================ */
 .site-nav {
   position: sticky;
   top: 0;
@@ -156,9 +145,10 @@ figcaption {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 1px 0 #eee;
-  background: #000000;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  color: #111111;
 }
 
 .site-nav ul {
@@ -190,12 +180,17 @@ figcaption {
     border: 1px solid #ddd;
     border-radius: 0.5rem;
     padding: 0.3rem 0.5rem;
-    background: none;
+    background: #ffffff;
+    color: #111;
   }
 
   #nav-menu { 
     display: none; 
     flex-direction: column; 
+    background: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 
   #nav-menu.open { 
@@ -409,7 +404,7 @@ card,
   width: 1px;
   height: 1px;
   padding: 0;
-  margin: -1px;
+  margin: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
@@ -430,8 +425,8 @@ card,
   border-radius: 999px;
   padding: 0.4rem 0.4rem 0.4rem 0.9rem;
   box-shadow: 
-    0 0 0 1px rgba(255, 255, 255, 0.1),
-    0 6px 16px rgba(0, 0, 0, 0.5);
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 6px 16px rgba(0, 0, 0, 0.10);
 }
 
 .search-icon {
