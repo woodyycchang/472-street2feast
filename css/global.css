@@ -41,7 +41,7 @@ a { color: inherit; text-decoration: none; }
 .text-foreground { color: hsl(var(--foreground)); }
 
 body {
-  background-color: hsl(var(--background));
+  background-color: #FFF9D6;   /* 淡黄色背景 */
   color: hsl(var(--foreground));
 }
 

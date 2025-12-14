@@ -66,12 +66,6 @@
           </ul>
         </section>
 
-        <!-- ⭐ Featured Foods Section -->
-        <section class="narrow" id="home-features">
-          <h2>Featured Street Foods</h2>
-          <div id="features-container" class="features-grid"></div>
-        </section>
-
       </div>
     </main>
 
@@ -82,29 +76,6 @@
     <script>
       // Footer Year
       document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-    <!-- ⭐ Load home-features.json and create cards -->
-    <script>
-      fetch("assets/images/home-features.json")
-        .then(res => res.json())
-        .then(data => {
-          const container = document.getElementById("features-container");
-
-          data.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "feature-card";
-
-            card.innerHTML = `
-              <img src="assets/images/${item.file}" alt="${item.title}">
-              <h3>${item.title}</h3>
-              <p>${item.description}</p>
-            `;
-
-            container.appendChild(card);
-          });
-        })
-        .catch(err => console.error("Error loading features:", err));
     </script>
 
     <script src="js/nav.js"></script>
