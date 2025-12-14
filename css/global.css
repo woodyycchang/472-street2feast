@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
+/* Theme variables */
 :root { 
   --muted: #666; 
   --brand: #f2b705;
@@ -7,7 +8,8 @@
   --card: #f8f6e3; 
   --background: 45 60% 88%; 
   --sidebar-background: 0 0% 98%; 
-  --foreground: 0 0% 12%; }
+  --foreground: 0 0% 12%; 
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,13 +19,17 @@
   }
 }
 
+/* Optional dark-mode class hook */
 .dark {
   --background: 20 14.3% 4.1%;
   --sidebar-background: 240 5.9% 10%;
   --foreground: 0 0% 98%;
 }
 
-* { box-sizing: border-box; }
+/* Global resets */
+* { 
+  box-sizing: border-box; 
+}
 
 html,
 body {
@@ -34,17 +40,32 @@ body {
   line-height: 1.5;
 }
 
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-
-.bg-background { background-color: hsl(var(--background)); }
-.text-foreground { color: hsl(var(--foreground)); }
-
-body {
-  background-color: #FFF9D6;   /* 淡黄色背景 */
-  color: hsl(var(--foreground));
+img { 
+  max-width: 100%; 
+  display: block; 
 }
 
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+/* Utility color classes */
+.bg-background { 
+  background-color: hsl(var(--background)); 
+}
+
+.text-foreground { 
+  color: hsl(var(--foreground)); 
+}
+
+/* Main page background + default text color */
+body {
+  background-color: #FFF9D6;      /* soft yellow background */
+  color: #111111;                 /* dark body text */
+}
+
+/* Headings */
 h1,
 h2,
 h3 {
@@ -60,7 +81,7 @@ h1 {
 h2 {
   font-size: clamp(1.3rem, 1.2vw + 1rem, 1.6rem);
   font-weight: 700;
-  color:#000000;
+  color: #000000;
 }
 
 h3 {
@@ -68,6 +89,7 @@ h3 {
   font-weight: 600;
 }
 
+/* Main content widths */
 .content,
 .content-body,
 .narrow {
@@ -76,21 +98,55 @@ h3 {
   padding: 1.25rem;
 }
 
-.content-body > * { margin-block: 0.6rem; }
-.content-body p { margin: 0.6rem 0; }
-.content-body ul { padding-left: 1.25rem; }
-.content-body li { margin: 0.25rem 0; }
+/* Ensure content text is readable on light background */
+.content-body,
+.content-body p,
+.content-body li,
+.content-body strong,
+.content-body em {
+  color: #000000;
+}
+
+.content-body > * { 
+  margin-block: 0.6rem; 
+}
+
+.content-body p { 
+  margin: 0.6rem 0; 
+}
+
+.content-body ul { 
+  padding-left: 1.25rem; 
+}
+
+.content-body li { 
+  margin: 0.25rem 0; 
+}
 
 @media (max-width: 720px) {
   .content,
   .content-body,
-  .narrow { padding: 0.9rem; }
+  .narrow { 
+    padding: 0.9rem; 
+  }
 }
 
-figure { margin: 0 0 1rem; }
-figure img { border-radius: 12px; }
-figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
+/* Figures */
+figure { 
+  margin: 0 0 1rem; 
+}
 
+figure img { 
+  border-radius: 12px; 
+}
+
+figcaption { 
+  color: var(--muted); 
+  font-size: 0.9rem; 
+  margin-top: 0.25rem; 
+}
+
+/* Top navigation bar */
 .site-nav {
   position: sticky;
   top: 0;
@@ -123,7 +179,10 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
   color: #111;
 }
 
-.nav-toggle { display: none; }
+/* Mobile nav toggle */
+.nav-toggle { 
+  display: none; 
+}
 
 @media (max-width: 720px) {
   .nav-toggle {
@@ -133,10 +192,18 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
     padding: 0.3rem 0.5rem;
     background: none;
   }
-  #nav-menu { display: none; flex-direction: column; }
-  #nav-menu.open { display: flex; }
+
+  #nav-menu { 
+    display: none; 
+    flex-direction: column; 
+  }
+
+  #nav-menu.open { 
+    display: flex; 
+  }
 }
 
+/* Footer */
 .site-footer {
   padding: 2rem 1rem;
   text-align: center;
@@ -144,6 +211,7 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
   border-top: 1px solid #eee;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   background: var(--brand);
@@ -153,6 +221,7 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
   font-weight: 600;
 }
 
+/* Reviews list */
 .reviews {
   display: grid;
   gap: 0.6rem;
@@ -166,6 +235,7 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
   border-radius: 0.6rem;
 }
 
+/* Hero section */
 .hero {
   position: relative;
   height: 60vh;
@@ -178,7 +248,9 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
 }
 
 @media (min-width: 768px) {
-  .hero { height: 70vh; }
+  .hero { 
+    height: 70vh; 
+  }
 }
 
 .hero img.hero-img {
@@ -203,10 +275,18 @@ figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
   padding: 0 1rem;
 }
 
-.grid { display: grid; gap: 1rem; }
-.grid.three,
-.panels.three .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+/* Generic grid helpers */
+.grid { 
+  display: grid; 
+  gap: 1rem; 
+}
 
+.grid.three,
+.panels.three .grid { 
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+}
+
+/* Cards / panels */
 card,
 .teaser,
 .panel {
@@ -214,7 +294,11 @@ card,
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
-.cards .card { overflow: hidden; position: relative; }
+
+.cards .card { 
+  overflow: hidden; 
+  position: relative; 
+}
 
 .card img {
   width: 100%;
@@ -224,9 +308,14 @@ card,
   transition: transform 0.3s ease;
 }
 
-.cards .card:hover figure img { transform: scale(1.04); }
+.cards .card:hover figure img { 
+  transform: scale(1.04); 
+}
 
-.media-list { grid-template-columns: 1fr; }
+/* Media object layout */
+.media-list { 
+  grid-template-columns: 1fr; 
+}
 
 .media {
   display: grid;
@@ -246,11 +335,19 @@ card,
 }
 
 @media (max-width: 860px) {
-  .media { grid-template-columns: 1fr; }
-  .media-figure img { height: 200px; }
+  .media { 
+    grid-template-columns: 1fr; 
+  }
+
+  .media-figure img { 
+    height: 200px; 
+  }
 }
 
-.text-center { text-align: center; }
+/* Simple helpers */
+.text-center { 
+  text-align: center; 
+}
 
 .split-media.framed {
   background: #b9b3a9;
@@ -268,14 +365,18 @@ card,
 }
 
 @media (max-width: 780px) {
-  .split-media.framed img { max-height: 260px; }
+  .split-media.framed img { 
+    max-height: 260px; 
+  }
 }
 
+/* Focus styles */
 :focus-visible {
   outline: 2px solid #111;
   outline-offset: 2px;
 }
 
+/* Skip link for accessibility */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -302,7 +403,7 @@ card,
   border-bottom: 1px solid #eee;
 }
 
-/* for hidden text (search dishes or cities) */
+/* Visually-hidden text (for screen readers) */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -314,7 +415,9 @@ card,
   border: 0;
 }
 
-/* Search bar layout */
+/* ============================================
+   Search bar styles
+   ============================================ */
 .search-bar {
   margin: 1.5rem 0 2rem;
 }
@@ -373,9 +476,8 @@ card,
 }
 
 /* ============================================
-   FEATURED FOODS — NEW SECTION STYLES
+   Featured foods section styles
    ============================================ */
-
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -440,3 +542,4 @@ card,
   height: 220px;
   object-fit: cover;
 }
+
