@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
-:root {
-  --muted: #666;
+:root { 
+  --muted: #666; 
   --brand: #f2b705;
-  --accent: #a89f94;
-  --card: #f8f6e3;
-  --background: 45 60% 88%;
-  --sidebar-background: 0 0% 98%;
-  --foreground: 0 0% 12%;
-}
+  --accent: #a89f94; 
+  --card: #f8f6e3; 
+  --background: 45 60% 88%; 
+  --sidebar-background: 0 0% 98%; 
+  --foreground: 0 0% 12%; }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -217,9 +216,11 @@ card,
 }
 .cards .card { overflow: hidden; position: relative; }
 
-.cards .card figure img {
-  aspect-ratio: 16 / 10;
+.card img {
+  width: 100%;
+  height: 200px;
   object-fit: cover;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
